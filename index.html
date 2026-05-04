@@ -72,7 +72,7 @@
   .hero p.tagline{
     color:var(--paleb);
     font-size:14px;
-    max-width:680px;
+    max-width:720px;
     line-height:1.6;
   }
 
@@ -104,6 +104,120 @@
     color:var(--navy);
     line-height:1.2;
   }
+
+  /* ── INTRO LEAD (above forthcoming) ── */
+  .lead-text{
+    color:var(--ink);
+    font-size:13.5px;
+    line-height:1.65;
+    margin-bottom:22px;
+    max-width:780px;
+  }
+  .lead-text strong{color:var(--navy)}
+
+  /* ── METHODOLOGY SECTION ── */
+  .method-intro{
+    background:#fff;
+    border-radius:8px;
+    padding:28px 32px;
+    box-shadow:0 2px 10px rgba(0,0,0,.06);
+    border-left:4px solid var(--sky);
+    margin-bottom:24px;
+  }
+  .method-intro p{
+    color:var(--ink);
+    font-size:13.5px;
+    line-height:1.65;
+    margin-bottom:0;
+    max-width:760px;
+  }
+  .method-intro p strong{color:var(--navy)}
+  .method-intro p em{color:var(--midb);font-style:italic}
+
+  .macro-banner{
+    background:linear-gradient(135deg,var(--dark1),var(--navy));
+    border-radius:8px;
+    padding:18px 24px;
+    margin-bottom:18px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+  }
+  .macro-banner .macro-icon{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:var(--sky);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Playfair Display',serif;
+    font-weight:900;
+    font-size:18px;
+    flex-shrink:0;
+  }
+  .macro-banner .macro-text{flex:1}
+  .macro-banner .macro-label{
+    font-size:9px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--lb);
+    margin-bottom:3px;
+  }
+  .macro-banner .macro-name{
+    font-family:'Playfair Display',serif;
+    font-size:17px;
+    font-weight:700;
+    color:#fff;
+    margin-bottom:2px;
+  }
+  .macro-banner .macro-desc{
+    color:var(--paleb);
+    font-size:12px;
+    line-height:1.5;
+    margin:0;
+  }
+
+  .pillars-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:14px;
+    margin-bottom:48px;
+  }
+  .pillar{
+    background:#fff;
+    border-radius:6px;
+    padding:18px 20px 20px;
+    box-shadow:0 2px 10px rgba(0,0,0,.06);
+    border-top:3px solid var(--blue);
+    display:flex;
+    flex-direction:column;
+  }
+  .pillar .pillar-num{
+    font-family:'Playfair Display',serif;
+    font-size:30px;
+    font-weight:900;
+    color:var(--paleb);
+    line-height:1;
+    margin-bottom:6px;
+  }
+  .pillar h4{
+    font-family:'Playfair Display',serif;
+    font-size:15px;
+    font-weight:700;
+    color:var(--navy);
+    line-height:1.25;
+    margin-bottom:8px;
+  }
+  .pillar p{
+    color:var(--ink);
+    font-size:12px;
+    line-height:1.55;
+    margin-bottom:0;
+  }
+  .pillar p em{color:var(--midb);font-style:italic}
 
   /* ── FEATURED ISSUE ── */
   .featured{
@@ -298,7 +412,6 @@
     background:var(--bgl);
     border-radius:6px;
     overflow:hidden;
-    border-top:3px solid var(--sky);
     border:1px solid var(--bgn);
     border-top:3px solid var(--sky);
     display:flex;
@@ -360,6 +473,42 @@
     flex:1;
   }
 
+  /* ── CADENCE STRIP (publication rhythm) ── */
+  .cadence-strip{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+    margin-bottom:24px;
+  }
+  .cadence-card{
+    background:#fff;
+    border-radius:6px;
+    padding:16px 18px;
+    border-left:3px solid var(--sky);
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
+  }
+  .cadence-card .cadence-label{
+    font-size:9px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--sky);
+    margin-bottom:4px;
+  }
+  .cadence-card h5{
+    font-family:'Playfair Display',serif;
+    font-size:14px;
+    font-weight:700;
+    color:var(--navy);
+    margin-bottom:4px;
+  }
+  .cadence-card p{
+    color:var(--ink);
+    font-size:11.5px;
+    line-height:1.5;
+    margin:0;
+  }
+
   /* ── FOOTER ── */
   .foot{
     background:var(--navy);
@@ -405,6 +554,9 @@
     .featured-body{padding:24px}
     .featured-body h3{font-size:19px}
     .issues-grid{grid-template-columns:1fr;gap:14px}
+    .pillars-grid{grid-template-columns:1fr;gap:12px}
+    .cadence-strip{grid-template-columns:1fr;gap:12px}
+    .method-intro{padding:22px 24px}
     .foot{padding:22px 24px;flex-direction:column;align-items:flex-start}
     .foot .ft-disclaimer{max-width:100%}
   }
@@ -417,7 +569,7 @@
     <div class="logo">The Square <span>Foot</span></div>
     <div class="mast-meta">
       Roofing Intelligence<br>
-      <strong>Issued Monthly</strong>
+      <strong>Monthly · Quarterly · Yearly</strong>
     </div>
   </div>
 
@@ -425,14 +577,89 @@
   <div class="hero">
     <div class="hero-inner">
       <h1>Top-Line <em>Ridges</em> &amp; Bottom-Line <em>Leaks</em>.</h1>
-      <p class="tagline">Monthly intelligence for roofing executives and private equity investors. Each issue covers M&amp;A, market dynamics, regulatory shifts, technology, historical perspective, and a rotating key operating metric.</p>
+      <p class="tagline">Recurring intelligence for roofing executives and private equity investors. Each issue is built on a four-pillar framework — <em>materials, distributors, contractors, and specialty tech</em> — with a macroeconomic layer above and a rotating key operating metric within.</p>
     </div>
   </div>
 
   <!-- CONTAINER -->
   <div class="container">
 
-    <!-- LATEST ISSUE -->
+    <!-- ─────────── METHODOLOGY ─────────── -->
+    <div class="section-head">
+      <div class="slabel">Methodology</div>
+      <h2>How we read the industry</h2>
+    </div>
+
+    <div class="method-intro">
+      <p>The US roofing industry runs on four interconnected components: <strong>materials</strong> producers and brands, <strong>distributors</strong> moving product from manufacturer to job site, <strong>contractors</strong> installing and maintaining roofing systems, and <strong>specialty tech</strong> reshaping how the work is sold, measured, and delivered. Sitting above all four is the <em>macroeconomic environment</em> — interest rates, housing starts, insurance dynamics, and the policy backdrop that shapes every transaction in the chain. Every issue of The Square Foot reads the month through this lens.</p>
+    </div>
+
+    <div class="macro-banner">
+      <div class="macro-icon">M</div>
+      <div class="macro-text">
+        <div class="macro-label">The Layer Above</div>
+        <div class="macro-name">Macroeconomic Outlook</div>
+        <p class="macro-desc">Fiscal policy, capital cost, housing &amp; CRE dynamics, insurance market structure, and the legal/regulatory backdrop that frames every roofing-industry transaction.</p>
+      </div>
+    </div>
+
+    <div class="pillars-grid">
+
+      <div class="pillar">
+        <div class="pillar-num">01</div>
+        <h4>Roofing Materials</h4>
+        <p>Companies that <em>produce and distribute</em> roofing products designed to cover, protect, and insulate residential and commercial structures — shingles, underlayment, decking, fasteners, and gutter/drainage systems. We track price action, raw input costs, and manufacturer-led pricing announcements.</p>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-num">02</div>
+        <h4>Roofing Distributors</h4>
+        <p>The <em>specialized wholesale supply chain</em> connecting manufacturers to contractors. Distributors operate networks of warehouses, fleet vehicles, and credit facilities — aggregating purchasing power to negotiate manufacturer rebates while serving as primary supply depot for regional installers.</p>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-num">03</div>
+        <h4>Roofing Contractors</h4>
+        <p>Businesses specializing in the <em>installation, repair, maintenance, and waterproofing</em> of roofing systems. Operate localized labor crews, specialized equipment, and direct customer relationships — the primary service provider layer for residential and commercial roofing work.</p>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-num">04</div>
+        <h4>Roofing Specialty Tech</h4>
+        <p>The <em>blending of traditional roofing with digital, material, and robotic technologies</em> — drones, AI-powered measurement, next-gen solar shingles, smart materials and sensors, and the operating-system platforms (CRM, estimating, field) reshaping how the industry runs.</p>
+      </div>
+
+    </div>
+
+    <!-- ─────────── PUBLICATION CADENCE ─────────── -->
+    <div class="section-head">
+      <div class="slabel">Publication Cadence</div>
+      <h2>How the reports stack up</h2>
+    </div>
+
+    <p class="lead-text">
+      The Square Foot publishes on a recurring rhythm built to support both day-to-day decisioning and longer-horizon planning. <strong>Monthly issues</strong> cover the prior 30 days with hard-hitting facts and a rotating key metric. <strong>Quarterly reports</strong> consolidate three months of activity into trend-level analysis with a forward outlook. <strong>Yearly reports</strong> publish at the start of each calendar year as a roadmap for the year ahead.
+    </p>
+
+    <div class="cadence-strip">
+      <div class="cadence-card">
+        <div class="cadence-label">Monthly</div>
+        <h5>State of the Union</h5>
+        <p>The 30-day brief. M&amp;A, materials, regulatory, tech spotlight, history, and the rotating key metric.</p>
+      </div>
+      <div class="cadence-card">
+        <div class="cadence-label">Quarterly</div>
+        <h5>State of the Union</h5>
+        <p>Three months of activity consolidated into trend-level analysis with a forward outlook.</p>
+      </div>
+      <div class="cadence-card">
+        <div class="cadence-label">Yearly</div>
+        <h5>State of the Union</h5>
+        <p>Published at the start of each calendar year — a strategic roadmap for the twelve months ahead.</p>
+      </div>
+    </div>
+
+    <!-- ─────────── LATEST ISSUE ─────────── -->
     <div class="section-head">
       <div class="slabel">Latest Issue</div>
       <h2>Currently on the masthead</h2>
@@ -444,7 +671,7 @@
         <div>
           <div class="issue-num">04 <span>·</span> 26</div>
           <div class="issue-month">April 2026</div>
-          <div class="issue-vol">Vol. 1 · Issue 2</div>
+          <div class="issue-vol">Vol. 1 · Issue 2 · Monthly</div>
         </div>
       </div>
       <div class="featured-body">
@@ -455,7 +682,7 @@
       </div>
     </a>
 
-    <!-- FORTHCOMING -->
+    <!-- ─────────── FORTHCOMING ─────────── -->
     <div class="section-head">
       <div class="slabel">Forthcoming</div>
       <h2>What's coming next</h2>
@@ -472,7 +699,7 @@
         <div class="card-body">
           <div class="card-month-line">Monthly · May 2026</div>
           <h4>The May 2026 Issue</h4>
-          <p>Covering May 2026 activity across M&amp;A, materials, regulatory developments, technology, and the next rotating key metric. Publishing early June.</p>
+          <p>Covering May 2026 activity across the four pillars — materials, distributors, contractors, and specialty tech — with the next rotating key metric. Publishing early June.</p>
         </div>
       </div>
 
@@ -491,7 +718,7 @@
 
     </div>
 
-    <!-- PAST ISSUES -->
+    <!-- ─────────── PAST ISSUES ─────────── -->
     <div class="section-head">
       <div class="slabel">Past Issues</div>
       <h2>Previously published</h2>
@@ -518,8 +745,7 @@
         TO ADD A NEW PAST ISSUE EACH MONTH:
 
         1. When a new issue publishes, move the current "featured"
-           block down here as a new <a class="issue-card"> entry
-           (using the template below).
+           block down here as a new <a class="issue-card"> entry.
         2. Replace the featured block above with the new month's details.
         3. Update the FORTHCOMING section: remove the forthcoming card
            that just published, and add the next forthcoming month.
