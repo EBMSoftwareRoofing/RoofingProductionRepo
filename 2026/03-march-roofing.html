@@ -19,8 +19,11 @@
   *{margin:0;padding:0;box-sizing:border-box}
 
   /* PRINT BUTTON */
-  .print-bar{background:var(--navy);padding:10px 48px;display:flex;align-items:center;justify-content:space-between}
-  .print-bar span{color:var(--paleb);font-family:'Inter',sans-serif;font-size:12px}
+.print-bar{background:var(--navy);padding:10px 48px;display:flex;align-items:center;justify-content:space-between}
+.print-bar .back-link{color:var(--paleb);font-family:'Inter',sans-serif;font-size:12px;text-decoration:none;font-weight:500;letter-spacing:.3px;display:inline-flex;align-items:center;gap:6px;transition:color .15s ease}
+.print-bar .back-link:hover{color:#fff}
+.print-bar .back-link::before{content:"←";font-size:14px;color:var(--lb)}
+.print-bar span{color:var(--paleb);font-family:'Inter',sans-serif;font-size:12px}
   .print-btn{background:var(--sky);color:#fff;border:none;padding:8px 20px;border-radius:4px;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;cursor:pointer;letter-spacing:.5px}
   .print-btn:hover{background:var(--blue)}
 
