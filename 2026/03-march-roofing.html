@@ -15,20 +15,9 @@
     --dg:#59575B; --mg:#817F83;
   }
 
-  @media(max-width:720px){
-  .print-bar,.mast,.foot{padding-left:24px;padding-right:24px}
-  .hero{padding:32px 24px 28px}
-  .hero h1{font-size:22px}
-  .container{padding:0 20px 32px}
-  .p1{grid-template-columns:1fr}
-  .p2{padding:16px 24px 24px}
-  .pb{padding-left:24px;padding-right:24px}
-  .metric-hero{grid-template-columns:1fr}
-  .foot{flex-direction:column;align-items:flex-start;padding:22px 24px}
-  .fd{max-width:100%}
-}
   *{margin:0;padding:0;box-sizing:border-box}
-
+  body{background:var(--bgl);font-family:'Inter',sans-serif;font-size:13px;line-height:1.6;color:var(--ink);min-height:100vh}
+  
     /* Page frame — constrains newsletter to letter-style width with grey margins */
   .page-frame{max-width:1200px;margin:0 auto;background:#fff;box-shadow:0 0 24px rgba(0,0,0,.08)}
 
@@ -154,6 +143,17 @@
     .p1{page-break-inside:avoid}
     .p2{page-break-before:always}
     @page{margin:.4in .4in .4in .4in;size:letter portrait}
+      @media(max-width:720px){
+  .print-bar,.mast,.foot{padding-left:24px;padding-right:24px}
+  .hero{padding:32px 24px 28px}
+  .hero h1{font-size:22px}
+  .container{padding:0 20px 32px}
+  .p1{grid-template-columns:1fr}
+  .p2{padding:16px 24px 24px}
+  .pb{padding-left:24px;padding-right:24px}
+  .metric-hero{grid-template-columns:1fr}
+  .foot{flex-direction:column;align-items:flex-start;padding:22px 24px}
+  .fd{max-width:100%}
   }
 </style>
 </head>
