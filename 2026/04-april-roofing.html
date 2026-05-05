@@ -66,37 +66,26 @@
   .sidebar-divider{height:1px;background:rgba(255,255,255,.12);margin:16px 0}
 
   /* MACRO SNAPSHOTS */
-  .snap-label{font-size:8px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--lb);margin-bottom:10px}
-  .snap-card{background:rgba(255,255,255,.07);border-radius:4px;padding:10px 12px;margin-bottom:8px}
+  .snap-label{font-size:10.5px;font-weight:900;letter-spacing:2.5px;text-transform:uppercase;color:#fff;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--sky)}
+  .snap-card{background:rgba(255,255,255,.07);border-radius:5px;padding:13px 15px;margin-bottom:12px}
   .snap-card:last-child{margin-bottom:0}
-  .snap-card .sc-title{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--sky);margin-bottom:5px}
-  .snap-card .sc-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px}
-  .snap-card .sc-main{font-family:'Playfair Display',serif;font-size:20px;font-weight:900;color:#fff;line-height:1}
-  .snap-card .sc-unit{font-size:10px;color:var(--paleb);margin-left:3px}
-  .snap-card .sc-delta{font-size:10px;font-weight:700}
+  .snap-card .sc-title{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--sky);margin-bottom:7px}
+  .snap-card .sc-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px}
+  .snap-card .sc-main{font-family:'Playfair Display',serif;font-size:24px;font-weight:900;color:#fff;line-height:1}
+  .snap-card .sc-unit{font-size:11px;color:var(--paleb);margin-left:3px}
+  .snap-card .sc-delta{font-size:10.5px;font-weight:700}
   .snap-card .sc-delta.up{color:#f87171}
   .snap-card .sc-delta.down{color:#86efac}
-  .snap-card .sc-sub{font-size:10px;color:var(--fg3);line-height:1.4}
-  .snap-card .sc-compare{font-size:10px;color:var(--paleb);margin-top:4px;line-height:1.35}
+  .snap-card .sc-sub{font-size:10.5px;color:var(--fg3);line-height:1.45}
+  .snap-card .sc-compare{font-size:10.5px;color:var(--paleb);margin-top:5px;line-height:1.4}
   .snap-card .sc-compare span{color:#fff;font-weight:600}
 
   /* mini bar for materials index */
-  .mini-bar-row{display:flex;align-items:center;gap:6px;margin-bottom:4px}
-  .mini-bar-lbl{font-size:9px;color:var(--paleb);width:62px;flex-shrink:0;line-height:1.3}
-  .mini-bar-bg{flex:1;background:rgba(255,255,255,.1);border-radius:2px;height:5px}
-  .mini-bar-fill{height:5px;border-radius:2px}
-  .mini-bar-val{font-size:9px;font-weight:700;color:#fff;width:28px;text-align:right;flex-shrink:0}
-
-  /* hail map placeholder */
-  .hail-map{background:rgba(0,32,96,.6);border-radius:4px;padding:8px 10px;margin-top:4px;position:relative;overflow:hidden}
-  .hail-map .map-us{display:grid;grid-template-columns:repeat(10,1fr);gap:2px}
-  .hail-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.06)}
-  .hail-dot.hot{background:#f87171;opacity:.85}
-  .hail-dot.warm{background:#fbbf24;opacity:.7}
-  .hail-dot.mild{background:#60a5fa;opacity:.5}
-  .hail-map-legend{display:flex;gap:8px;margin-top:6px}
-  .hail-map-legend span{font-size:8px;color:var(--paleb);display:flex;align-items:center;gap:3px}
-  .hail-map-legend .dot{width:6px;height:6px;border-radius:50%;display:inline-block}
+  .mini-bar-row{display:flex;align-items:center;gap:7px;margin-bottom:5px}
+  .mini-bar-lbl{font-size:9.5px;color:var(--paleb);width:70px;flex-shrink:0;line-height:1.3}
+  .mini-bar-bg{flex:1;background:rgba(255,255,255,.1);border-radius:2px;height:6px}
+  .mini-bar-fill{height:6px;border-radius:2px}
+  .mini-bar-val{font-size:9.5px;font-weight:700;color:#fff;width:32px;text-align:right;flex-shrink:0}
 
   /* rate trend mini sparkline */
   .rate-row{display:flex;align-items:flex-end;gap:3px;margin:6px 0 4px;height:28px}
@@ -321,31 +310,6 @@
         <span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span>
       </div>
       <div class="sc-sub" style="margin-top:5px">Rate held for 6th consecutive meeting. First cut now priced at Sept 2026 per CME FedWatch.</div>
-    </div>
-
-    <!-- 4. Hail Alley Activity -->
-    <div class="snap-card">
-      <div class="sc-title">Hail Alley Activity — Past 30 Days</div>
-      <div class="sc-sub" style="margin-bottom:6px">Above-avg hail events by region</div>
-      <div class="hail-map">
-        <!-- Simplified US grid: 4 rows × 10 cols representing west→east, north→south -->
-        <div class="map-us">
-          <!-- Row 1 (north) -->
-          <div class="hail-dot"></div><div class="hail-dot"></div><div class="hail-dot mild"></div><div class="hail-dot mild"></div><div class="hail-dot warm"></div><div class="hail-dot warm"></div><div class="hail-dot mild"></div><div class="hail-dot mild"></div><div class="hail-dot"></div><div class="hail-dot"></div>
-          <!-- Row 2 -->
-          <div class="hail-dot"></div><div class="hail-dot mild"></div><div class="hail-dot mild"></div><div class="hail-dot warm"></div><div class="hail-dot hot"></div><div class="hail-dot hot"></div><div class="hail-dot warm"></div><div class="hail-dot mild"></div><div class="hail-dot mild"></div><div class="hail-dot"></div>
-          <!-- Row 3 (south) -->
-          <div class="hail-dot"></div><div class="hail-dot"></div><div class="hail-dot mild"></div><div class="hail-dot warm"></div><div class="hail-dot hot"></div><div class="hail-dot hot"></div><div class="hail-dot warm"></div><div class="hail-dot mild"></div><div class="hail-dot"></div><div class="hail-dot"></div>
-          <!-- Row 4 -->
-          <div class="hail-dot"></div><div class="hail-dot"></div><div class="hail-dot"></div><div class="hail-dot mild"></div><div class="hail-dot warm"></div><div class="hail-dot mild"></div><div class="hail-dot"></div><div class="hail-dot"></div><div class="hail-dot"></div><div class="hail-dot"></div>
-        </div>
-        <div class="hail-map-legend">
-          <span><span class="dot" style="background:#f87171"></span> High</span>
-          <span><span class="dot" style="background:#fbbf24"></span> Moderate</span>
-          <span><span class="dot" style="background:#60a5fa"></span> Elevated</span>
-        </div>
-      </div>
-      <div class="sc-sub" style="margin-top:5px">TX/OK/KS corridor active. Below-avg Gulf Coast activity aligns with CSU's quieter '26 forecast.</div>
     </div>
 
   </div><!-- end col-left -->
