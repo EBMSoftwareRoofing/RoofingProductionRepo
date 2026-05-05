@@ -18,6 +18,9 @@
   *{margin:0;padding:0;box-sizing:border-box}
   body{background:var(--bgl);font-family:'Inter',sans-serif;font-size:13px;line-height:1.6;color:var(--ink);min-height:100vh}
 
+  /* Page frame — constrains newsletter to letter-style width with grey margins */
+  .page-frame{max-width:1100px;margin:0 auto;background:#fff;box-shadow:0 0 24px rgba(0,0,0,.08)}
+
   .print-bar{background:var(--navy);padding:10px 48px;display:flex;align-items:center;justify-content:space-between}
   .print-bar .back-link{color:var(--paleb);font-size:12px;text-decoration:none;font-weight:500;letter-spacing:.3px;display:inline-flex;align-items:center;gap:6px}
   .print-bar .back-link:hover{color:#fff}
@@ -40,7 +43,7 @@
 
   .container{max-width:1100px;margin:0 auto;padding:0 48px 48px}
 
-  .pb{background:var(--midb);color:#fff;padding:9px 48px;display:flex;align-items:center;gap:10px;width:100vw;position:relative;left:50%;transform:translateX(-50%)}
+  .pb{background:var(--midb);color:#fff;padding:9px 48px;display:flex;align-items:center;gap:10px}
   .pbn{background:var(--sky);width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:11px;flex-shrink:0;color:#fff}
   .pbt{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;white-space:nowrap}
 
@@ -51,7 +54,7 @@
   p{margin-bottom:10px;color:var(--dg);font-size:12.5px;line-height:1.55}
 
   /* PAGE 1 */
-  .p1{display:grid;grid-template-columns:220px 1fr;width:100vw;position:relative;left:50%;transform:translateX(-50%)}
+  .p1{display:grid;grid-template-columns:220px 1fr}
 
   /* LEFT SIDEBAR */
   .col-left{background:var(--navy);padding:22px 24px;display:flex;flex-direction:column}
@@ -121,12 +124,12 @@
   .hlsw{font-size:10px;color:var(--sky);font-weight:600}
 
   /* HISTORY — below high five */
-  .col-hist{background:var(--dark1);padding:18px 28px 22px;border-top:2px solid rgba(255,255,255,.08)}
-  .col-hist .slabel{color:var(--sky)}
+  .col-hist{background:var(--bgl);padding:22px 28px 26px;border-top:3px solid var(--sky)}
+  .col-hist .slabel{color:var(--blue)}
   .hist-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 
   /* WHITE history cards */
-  .hcard{background:var(--bg);border-top:3px solid var(--blue);border-radius:0 0 4px 4px;padding:12px 14px;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+  .hcard{background:var(--bg);border-top:3px solid var(--blue);border-radius:0 0 4px 4px;padding:12px 14px;box-shadow:0 2px 6px rgba(0,0,0,.06)}
   .hcard.accent-top{border-top-color:var(--sky)}
   .hcard h4{font-family:'Playfair Display',serif;font-size:12px;font-weight:700;color:var(--navy);margin-bottom:6px;line-height:1.3}
   .hcard p{font-size:11px;color:var(--ink);margin-bottom:6px;line-height:1.45}
@@ -190,6 +193,7 @@
   @media print{
     .print-bar{display:none!important}
     body{background:#fff;margin:0;padding:0}
+    .page-frame{max-width:100%;box-shadow:none;margin:0}
     .p1{page-break-inside:avoid}
     .p2{page-break-before:always}
     @page{margin:.4in;size:letter portrait}
@@ -199,9 +203,9 @@
     .hero{padding:32px 24px 28px}
     .hero h1{font-size:26px}
     .container{padding:0 20px 32px}
-    .p1{grid-template-columns:1fr;width:100%;left:0;transform:none}
+    .p1{grid-template-columns:1fr}
     .hist-grid{grid-template-columns:1fr}
-    .pb{padding-left:24px;width:100%;left:0;transform:none}
+    .pb{padding-left:24px}
     .metric-hero{grid-template-columns:1fr}
     .tech-layout{grid-template-columns:1fr}
     .tech-stats{grid-template-columns:1fr 1fr}
@@ -216,6 +220,8 @@
   <a href="../index.html" class="back-link">Back to Library</a>
   <button class="print-btn" onclick="window.print()">PRINT / SAVE PDF</button>
 </div>
+
+<div class="page-frame">
 
 <div class="mast">
   <div class="logo">The Square <span>Foot</span></div>
@@ -400,8 +406,8 @@
     <!-- HISTORY -->
     <div class="col-hist">
       <div class="slabel">Retrospective</div>
-      <h2 style="color:#fff;font-size:16px;margin-bottom:4px">Lessons from the Ladder</h2>
-      <p style="color:var(--paleb);font-size:10px;margin-bottom:14px">History this industry learned from — or repeats.</p>
+      <h2 style="color:var(--navy);font-size:16px;margin-bottom:4px">Lessons from the Ladder</h2>
+      <p style="color:var(--fg2);font-size:10px;margin-bottom:14px">History this industry learned from — or repeats.</p>
       <div class="hist-grid">
         <div class="hcard">
           <h4>The 2017–2019 Insurance Restoration Roll-Up Aftermath</h4>
@@ -563,6 +569,8 @@
   </div>
   <div class="ft-disclaimer">For informational purposes only. Not investment advice. Data sourced from QXO investor releases (Apr 1, Apr 19), Roofing Contractor, Modern Distribution Management, Bloomberg, Capstone Partners, AXIA Advisors, Roadmap Advisors, Colorado State University Tropical Weather and Climate Research, U.S. Department of Labor, SBA Office of Advocacy, KPMG Corporate Finance, IBISWorld, AGC, and BLS PPI. Past performance does not guarantee future results.</div>
 </div>
+
+</div><!-- end page-frame -->
 
 </body>
 </html>
