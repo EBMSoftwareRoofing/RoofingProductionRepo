@@ -409,10 +409,10 @@
 
   /* FORTHCOMING ISSUE CARD (not yet linked) */
   .forthcoming-card{
-    background:var(--bgl);
+    background:repeating-linear-gradient(135deg,var(--bgl) 0,var(--bgl) 10px,#fff 10px,#fff 20px);
     border-radius:6px;
     overflow:hidden;
-    border:1px solid var(--bgn);
+    border:2px dashed var(--lb);
     border-top:3px solid var(--sky);
     display:flex;
     flex-direction:column;
@@ -423,7 +423,8 @@
     display:flex;
     justify-content:space-between;
     align-items:baseline;
-    border-bottom:1px solid var(--bgn);
+    border-bottom:1px dashed var(--lb);
+    background:rgba(255,255,255,.7);
   }
   .forthcoming-card .card-issue-num{
     font-family:'Playfair Display',serif;
@@ -448,6 +449,7 @@
     flex:1;
     display:flex;
     flex-direction:column;
+    background:rgba(255,255,255,.65);
   }
   .forthcoming-card h4{
     font-family:'Playfair Display',serif;
